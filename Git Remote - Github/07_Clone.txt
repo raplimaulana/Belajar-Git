@@ -1,0 +1,14 @@
+### GIT CLONE ###
+Apa yang harus dilakukan jika misal kita ingin download project Git yang ada di Server ke komputer baru.
+Hal ini dinamakan perintah clone. Dengan perintah clone, kita bisa download project di remote repository ke local dan secara otomatis di download sebagai git project.
+Tidak perlu melakukan perintah git init lagi.
+
+##melakukan clone
+git clone urlremoterepository
+git clone git@github.com:raplimaulana/belajar-git-remote.git
+
+*secara default clone akan membuat project dengan nama folder sama dengan nama project remote repository
+
+##melakukan clone dengan nama folder yang berbeda dengan nama project remote repository
+git clone urlremoterepository namafolder
+git clone git@github.com:raplimaulana/belajar-git-remote.git belajar-git-remote-user2

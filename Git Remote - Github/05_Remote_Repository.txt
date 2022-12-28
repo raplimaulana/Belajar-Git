@@ -1,0 +1,25 @@
+### REMOTE REPOSITORY ###
+Ketika kita membuat Git Project, secara default, Git tidak tahu tentang Remote Repository.
+Kita perlu memberi tahu ke git project yang sudah kita buat tentang lokasi git repository.
+
+##menambahkan folder baru untuk git repository
+git init
+
+##menambah remote repository
+git remote add nama ssh-url
+git remote add github https://github.com/raplimaulana/belajar-git-remote.git         #https
+git remote add origin git@github.com:raplimaulana/belajar-git-remote.git             #SSH
+
+*salah satu kebiasaan di Git, biasanya memberi nama untuk remote repository dengan nama origin
+*ssh-url dapat dilihat pada menu awal pertama kali membuat repository 
+
+##melihat remote repository yang ada di git project
+git remote
+
+##melihat detail URL detail remote repository
+git remote get-url origin
+
+##menghapus remote repository
+git remote rm origin
+
+

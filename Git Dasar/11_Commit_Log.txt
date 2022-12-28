@@ -1,0 +1,18 @@
+##melihat log di git
+git log
+
+##melihat commit log message nya saja (versi sederhananya commit log)
+
+git log --oneline
+
+##graph
+### COMMIT LOG ###
+##melihat commit log yang berhubungan dengan commit log sebelumnya pada Git Branching
+
+git log --oneline --graph
+
+##melihat detail perubahan yang terjadi pada sebuah commit
+git show 5b83ef9 
+git show HEAD                                       #hash terakhir
+
+*5b83ef9 = hash

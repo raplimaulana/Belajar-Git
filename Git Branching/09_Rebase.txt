@@ -1,0 +1,28 @@
+### REBASE ###
+Sebelumnya untuk menggabungkan dua buah branch, kita sudah belajar yang namanya merge.
+Sekarang kita akan bahas tentang cara lain menggabungkan dua buah branch, yaitu rebase.
+Pada merge, perubahan file akan disimpan oleh git pada branch yang berbeda apabila menggunakan branch yang berbeda selain branch master (seperti cabang).
+Sedangkan pada rebase, apapun branchnya akan selalu disimpan oleh git pada satu timeline dengan branch master (linear).
+
+##melakukan rebase
+Untuk melakukan merge, pertama kita perlu pindah ke branch dimana lokasi rebase dibuat (kebalikan dari merge).
+
+git switch feature/rebase
+git rebase master
+
+*Artinya kita melakukan rebase semua commit di master ke branch saat ini.
+ Commit terakhir master, akan menjadi commit base/commit pertama branch saat ini, namun bukan berarti branch master jadi berubah karena hanya branch saat ini yang di rebase saja yang terpengaruh.
+
+##merge branch
+Setelah melakukan rebase, bukan berarti branch yang di rebase sekarang posisinya ada di branch yang melakukan rebase, posisinya tetap ada di commit terakhir di branch tersebut.
+Agar posisinya sama dengan branch yang melakukan rebase, kita bisa menggunakan perintah merge.
+
+git switch master
+git merge feature/rebase
+
+##merge vs rebase
+Rebase akan terlihat sangat rapih, karena timeline nya seakan terlihat hanya ada satu timeline pada Repository.
+Namun, rebase sebenarnya secara otomatis menulis ulang semua commit yang kita lakukan, dalam artian commit id pasti berubah, artinya semua referensi ke commit id sebelum-sebelumnya akan rusak dan hilang.
+Tidak ada mana yang lebih baik, semua tergantung kebutuhan.
+
+

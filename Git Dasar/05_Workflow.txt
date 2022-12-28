@@ -1,0 +1,21 @@
+### WORKFLOW ###
+##the three states
+Git memiliki tiga state terhadap file kita:
+1. Modified 
+   Kita mengubah (menambah, mengedit, menghapus) file, namun belum disimpan secara permanen ke repository.
+2. Staged 
+   Kita menandai modifikasi yang kita lakukan terhadap file akan disimpan secara permanen ke repository.
+3. Committed 
+   Data sudah aman disimpan di repository.
+
+##three section
+Tiga state sebelumnya di dalam Git dilakukan di section yang berbeda-beda, yaitu Working Directory, Staging Area dan Repository.
+Setiap perubahan akan kita lakukan di working directory.
+Jika ada yang mau kita siapkan untuk disimpan secara permanen, kita akan bawa perubahan tersebut ke staging index (staging area).
+Selanjutnya, kita bisa melakukan penyimpanan versi baru secara permanen ke repository.
+
+git add  = Working -> Staging index 
+git init = Staging index -> repository
+
+
+

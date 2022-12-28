@@ -1,0 +1,26 @@
+### PULL REQUEST ###
+Pull request = merge branch di server Github.
+Di Github dinamakan pull request, sedangkan pada Gitlab dinamakan merge request.
+
+Saat kita bekerja dengan tim, biasanya saat melakukan perubahan kita akan membuat di branch yang berbeda dengan branch utama.
+Setelah selesai, kita bisa melakukan yang namanya merge ke branch utama.
+Namun, beberapa fitur di remote git repository mendukung fitur yang namanya Pull Request atau Merge Request.
+Fitur ini sangat cocok untuk melakukan review otomatis di remote git repository, tanpa harus manual melakukan review dengan git diff.
+
+##melakukan pull request
+Cara melakukan pull request adalah sebagai berikut:
+1. Buka project repository yang ada di Github.
+2. Pilih menu "Pull requests".
+3. Pilih "New pull request".
+4. Pilih mau merge ke branch mana (base), dari branch mana (compare).
+   Misal base:Master, compare:feature/contoh.
+5. Pilih "Create pull request".
+6. Isi nama pull request-nya beserta comment-nya jika dibutuhkan.
+7. Jika berkolaborasi dengan team lain, dapat memasukan orang lain sebagai reviewer, dll.
+8. Pilih "Create pull request".
+9. Refresh kembali menu "Pull request".
+10. Review perubahan file apa saja yang terjadi di "Files changed".
+11. Jika sudah oke lakukan "Merge pull request" di "Conservation". Selanjutnya pilih "Confirm merge".
+12. Secara otomatis branch feature/contoh akan melakukan merge di branch master
+
+

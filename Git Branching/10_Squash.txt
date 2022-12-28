@@ -1,0 +1,15 @@
+### SQUASH ###
+Saat kita melakukan merge atau rebase, semua commit history akan tetap ada.
+Jadi jika kita di branch tersebut melakukan commit sebanyak 10 kali, ketika kita lakukan merge atau rebase, maka 10 commit tersebut akan tetap ada.
+Kadang ada kasus dimana kita ingin melakukan penggabungan commit tersebut menjadi 1 commit saja, hal ini dinamakan Squash.
+Squash akan membuat 10 commit history tersebut menjadi 1 commit, dimana semua 10 perubahan tersebut akan digabungkan menjadi 1 commit saja.
+
+##melakukan Squash
+Squash dilakukan ketika merge atau ketika rebase.
+
+git merge --squash feature/d
+git commit -m "Merge feature merge-squash"
+
+*berbeda dengan merge dan rebase, pada saat melakukan squash, perubahan file hanya disimpan ke dalam staging index sehingga diperlukan commit ulang secara manual
+
+

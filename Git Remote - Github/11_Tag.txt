@@ -1,0 +1,44 @@
+### TAG ###
+Saat kita melakukan push data ke remote repository, data Tag tidak akan di push juga ke remote repository.
+Jika kita ingin mengirim data Tag juga, kita perlu melakukan push tag tersebut.
+
+##membuat tag baru 
+git switch master
+vim version.txt
+
+1.0.0
+
+git add version.txt
+git commit -m "add version 1.0.0-SNAPSHOT"
+git log                                                           #copy hash coomit ID-nya, misal 33ab7b84272f2c30716325cadae9d17a01ca2449                             
+git tag 1.0.0 33ab7b84272f2c30716325cadae9d17a01ca2449
+git tag --list                                                    #check tag yang tersedia 
+
+
+##mengirim tag
+#mengirim sebuah Tag ke remote repository
+git push namaremote namatag
+git push origin 1.0.0
+
+#mengirim semua Tag ke remote repository, kita bisa gunakan perintah 
+git push namaremote --tags
+git push origin --tags
+
+##mengambil tag
+#mengambil Tag
+git fetch namaremote namatag
+git fetch origin 1.0.0
+
+#mengambil semua Tag 
+git fetch namaremote
+git fetch origin
+
+##menghapus tag 
+#menghapus tag di local repository
+git tag --delete 1.0.0
+
+*Saat kita menghapus Tag di local repository, data tag tersebut tetap ada di remote repository
+
+#menghapus tag di remote repository
+git push --delete namaremote namatag
+git push --delete origin 1.1.0

@@ -1,0 +1,25 @@
+### ADD REPOSITORY ###
+##Create a new repository
+git clone https://gitlab.com/rapli.maulana/latihan-git.git
+cd latihan-git
+git switch -c main
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin main
+
+##Push an existing folder
+cd existing_folder
+git init --initial-branch=main
+git remote add origin https://gitlab.com/rapli.maulana/latihan-git.git
+git add .
+git commit -m "Initial commit"
+#git commit --allow-empty
+git push -u origin main
+
+##Push an existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin https://gitlab.com/rapli.maulana/latihan-git.git
+git push -u origin --all
+git push -u origin --tags

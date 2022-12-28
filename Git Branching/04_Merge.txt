@@ -1,0 +1,16 @@
+### MERGE ###
+Merge adalah proses dimana kita melakukan penggabungan dua buah branch.
+Merge biasanya dilakukan setelah kita selesai membuat kode program di sebuah branch, dan ingin menggabungkan fitur tersebut ke branch lain, misal ke branch utama.
+Saat kita melakukan merge, branch tidak akan dihapus, artinya kita masih tetap bisa melakukan commit di branch yang ada.
+Jika kita ingin menghapus branch yang sudah di merge, kita perlu lakukan secara manual.
+
+##merge
+Untuk melakukan merge, pertama kita perlu pindah ke branch dimana lokasi merge akan dilakukan.
+
+git switch master
+git merge feature/1
+
+*Artinya branch dari feature/1 akan di merge ke dalam branch master (branch saat ini kita berada)
+
+##meihat log git dalam bentuk graph
+git log --oneline --graph

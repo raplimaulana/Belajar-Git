@@ -1,0 +1,6 @@
+### GIT ###
+Git merupakan salah satu Distributed Version Control.
+Git tidak membutuhkan server untuk melakukan perubahan atau melihat riwayat revisi, hal ini dikarenakan dalam Git, semua riwayat project akan selalu di duplikasi, baik itu di server ataupun di local computer.
+Artinya sebenarnya Git juga bisa digunakan sebagai Local Version Control.
+Setiap perubahan yang terjadi di Git akan selalu dibuat signature (tanda) nya menggunakan algoritma hashing SHA-1. Hal ini menjadikan perubahan sekecil apapun pasti bisa dideteksi oleh git.
+Semua hal yang terjadi di git secara otomatis akan dicatat, hal ini menjadikan perubahan apapun di Git,  pasti selalu bisa dikembalikan ke versi sebelumnya.

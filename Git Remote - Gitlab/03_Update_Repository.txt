@@ -1,0 +1,30 @@
+### UPDATE REPOSITORY ###
+
+##update file pake git
+#update repository terbaru
+git pull origin main
+
+#edit file yg ingin diubah
+vim file.txt
+
+#siapkan file yg ingin di upload
+git add file.txt / git add . jika ingin semua file di folder di upload
+
+#berikan komentar sebelum upload
+git commit -m "Update Fungsi perhitungan()"
+
+#push ke gitlab
+git push -u origin main jika pertamaka kali / git push jika sudah pernah git push -u origin main sebelumnya
+
+##update file pake branch
+#ganti dulu ke branch selain main
+git switch -c branch-rapli / git switch branch-maulana jika sudah ada
+
+##update branch dari gitlab ke local computer
+git fetch origin
+
+##solve konflik pada saat branch
+#masuk branch org lain
+git checkout -b 'maulana' 'origin/maulana'
+#ubah isi file yg kena konflik
+vim text.txt

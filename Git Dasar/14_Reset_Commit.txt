@@ -1,0 +1,24 @@
+### RESET COMMIT ###
+Sebelumnya kita sudah tahu membatalkan perubahan, namun bagaimana jika ternyata perubahan sudah terlanjur kita commit ke Repository?
+Untuk hal seperti itu, kita bisa melakukan reset commit.
+Reset commit merupakan mekanisme dimana kita menggeser HEAD pointer ke posisi commit yang kita mau, artinya commit selanjutnya akan dilakukan pada posisi HEAD baru.
+
+Ada beberapa mode pengaturan melakukan reset commit:
+1. --soft.
+   memindahkan HEAD pointer, namun tidak melakukan perubahan apapun di Staging Index dan Working Directory.
+2. --mixed (default)
+   memindahkan HEAD pointer, mengubah Staging Index menjadi sama seperti dengan Repository, namun tidak mengubah apapun di Working Directory.
+3. --hard
+   memindahkan HEAD pointer, dan mengubah Staging Index dan Working Directory sehingga sama dengan Repository.
+
+
+##reset commit
+git reset <mode> 5b83ef9
+git reset --soft 5b83ef9
+
+### REWRITE COMMIT ###
+Jika kita melakukan reset, namun kita belum membuat commit baru, Kita masih bisa kembali maju lagi ke commit yang paling baru.
+Namun jika kita membuat commit baru, secara otomatis commit lama akan ditimpa oleh commit baru.
+
+
+

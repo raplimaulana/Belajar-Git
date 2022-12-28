@@ -1,0 +1,17 @@
+### CONFIGURATION ###
+##konfigurasi username dan email
+Setelah selesai menginstall git, hal yang pertama kali kita lakukan adalah melakukan konfigurasi.
+Yang paling utama yang perlu kita konfigurasi diawal adalah user name dan user email agar mengerathui identitas yang mengubah kode program.
+
+git config --global user.name "Rapli Maulana Aji"
+git config --global user.email "rapli.maulana@gmail.com"
+
+##konfigurasi visual studio code
+Agar mempermudah, kita akan menjadikan Visual Studio Code sebagai default editor untuk Git dan default diff tool.
+
+git config --global core.editor "code --wait"
+git config --global diff.tool "default-diftool"
+git config --global diftool.default-diftool.cmd "code --wait --dif \$LOCAL \$REMOTE"
+
+##melihat seluruh konfigurasi
+git config --list --show-origin

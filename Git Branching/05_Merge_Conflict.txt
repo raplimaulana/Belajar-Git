@@ -1,0 +1,60 @@
+### MERGE CONFLICT ###
+Dalam pembuatan aplikasi, biasanya setiap programmer akan melakukan penambahkan kode program di Repository secara parallel.
+Biasanya tiap programmer akan membuat branch masing-masing, sehingga terkadang programmer akan melakukan perubahan pada kode file yang sama di branch berbeda.
+Dan biasanya ketika melakukan merge, akan terjadi yang namanya conflict.
+Hal ini disebabkan, satu file diubah di branch yang berbeda, sehingga ketika di merge, kita perlu melakukan yang namanya Merge Conflict
+
+##check git status ketika conflict merge terjadi
+git status
+
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        modified:   file3.txt                                    #file yang tidak konflik akan secara otomatis berada di Staging Index
+
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   file1.txt                               #file yang konflik akan secara otomatis berada di Working Directory
+
+
+##membatalkan konflik
+1. Jika terjadi conflict, maka kita wajib memperbaikinya terlebih dahulu.
+   Semua perubahan yang tidak konflik akan secara otomatis berada di Staging Index, sedangkan perubahan yang konflik akan secara otomatis berada di Working Directory
+
+2. Jika kita ingin membatalkan merge, kita bisa gunakan perintah:
+
+    git merge --abort
+
+    *Secara otomatis semua perubahan di branch yang ingin kita merge akan dihapus
+
+##memperbaiki konflik 
+1. Saat terjadi conflict tidak ada cara otomatis untukmemperbaikinya, sehingga kita perlu memperbaiki conflict secara manual.
+   
+   #tampilan file yang gagal merge akan seperti ini
+   vim file1.txt
+
+   Menambah file1.txt
+   Menambah baris di file1.txt
+   Feature 1
+   <<<<<<< HEAD
+   Feature A                     #baris yang ternyata sudah diganti oleh branch lain
+   =======
+   Feature B                     #baris yang ingin kita ubah
+   >>>>>>> feature/b
+
+   #ubah menjadi seperti berikut
+   vim file1.txt
+
+   Menambah file1.txt
+   Menambah baris di file1.txt
+   Feature 1
+   Feature A                    
+   Feature B  
+
+2. jika perbaikan conflict sudah dilakukan, maka kita perlu melakukan commit perubahan tersebut.
+   git add file1.txt
+   git commit -m "fix merge conflict"

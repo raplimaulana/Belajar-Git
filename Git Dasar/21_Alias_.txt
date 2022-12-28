@@ -1,0 +1,10 @@
+Git memiliki fitur yang bernama alias.
+Dengan alias, kita bisa menambah nama perintah lain untuk perintah yang sudah ada di git.
+Misal kita bisa menambah perintah komit untuk nama lain dari commit misalnya, atau menambah alias logline untuk nama lain dari log --oneline
+
+##menambahkan alias
+git config --global alias.komit commit
+git config --global alias.logone "log --oneline"
+
+
+

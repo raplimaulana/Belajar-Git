@@ -1,0 +1,9 @@
+##mengubah file
+Untuk melakukan perubahan file, kita cukup lakukan perubahan file terhadap file yang sudah ada di Repository. Secara otomatis git bisa mendeteksi perubahan.
+Sama seperti dengan menambah file, jika perubahan ingin kita simpan secara permanen, kita bisa pindahkan ke staging index, lalu commit ke Repository.
+
+##melihat perubahan file
+Ketika kita melakukan perubahan, Git secara otomatis mendeteksi bahwa file tersebut berubah.
+Jika kita ingin melihat perubahan yang terjadi, kita juga bisa menggunakan  Git untuk melihat perubahan nya dengan perintah berikut:
+
+git diff 

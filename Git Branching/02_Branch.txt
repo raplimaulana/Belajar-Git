@@ -1,0 +1,45 @@
+### BRANCH ###
+Secara default, Git pasti akan membuat branch utama, biasanya master atau main.
+
+##melihat nama branch saat ini
+git branch --show-current
+
+##membuat branch baru
+git branch develop
+
+*Saat kita buat branch baru, secara otomatis branch baru akan dimulai dari posisi branch kita saat ini. 
+ Jika misal kita membuat branch baru ketika posisi kita sedang di branch master, maka branch baru tersebut akan dibuat dari branch master.
+
+*Setelah membuat branch baru, kita tidak secara otomatis akan pindah banch.
+
+##melihat semua branch yang tersedia
+git branch --list
+
+atau
+
+git branch
+
+##pindah ke branch lain
+git switch develop
+
+atau 
+
+git checkout develop
+
+##mengubah nama branch
+Untuk mengubah nama branch, kita perlu pindah terlebih dahulu ke branch yang ingin kita ubah namanya.
+
+git branch -m development
+
+##menghapus branch
+Untuk menghapus branch, kita perlu keluar terlebih dahulu dari branch tersebut.
+
+git branch -d development
+
+atau
+
+git branch --delete development
+
+
+
+

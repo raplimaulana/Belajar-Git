@@ -1,0 +1,22 @@
+### CHERRY PICK ###
+Terkadang ada sebuah kasus ketika kita membuat kode program di sebuah branch, kita ingin melakukan merge, namun tidak ingin melakukan merge semua branch nya, mungkin hanya sebagian commit saja.
+Cherry pick merupakan fitur yang digunakan untuk mengambil commit dari branch manapun dan kita merge ke dalam branch saat ini.
+
+##melakukan cherry pick
+Misal sekarang kita ingin melakukan merge branch feature/c, namun kita tidak ingin merge semua perubahan. 
+Contohnya kita hanya ingin melakukan merge perubahan di file1.txt dan file3.txt. kita bisa melakukan cherry pick untuk commit perubahan tersebut.
+
+#pindah ke branch yang akan dilakukan merge
+git switch master
+
+#check ID commit yang dipilih
+git log --oneline --graph
+
+* 845fd4b (HEAD -> feature/c) Feature C - file4
+* 4e68ad3 Feature C - file3
+* 0244ddc Feature C - file2
+* 82452a3 Feature C - file1
+*   44191ba (master) fix merge conflict
+
+# melakukan cherry pick untuk commit file1.txt dan file3.txt
+git cherry-pick 82452a3

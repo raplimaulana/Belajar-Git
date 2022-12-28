@@ -1,0 +1,21 @@
+Kadang kita sering mengalami masalah dengan file yang sudah kita commit ke Repository.
+Git memiliki fitur dimana kita bisa melihat versi file pada commit sebelumnya.
+Saat kita mengambil versi file sebelumnya, file pada commit tersebut akan berada di Staging Index.
+
+#check hash yang ingin dilihat
+git log --oneline
+
+03d45e4 (HEAD -> master) menambah file4.txt
+b9644d1 menambah file4.txt
+5b83ef9 update file
+fb5a8aa Menambah file1.txt
+
+#pilih nama file dan hash yang akan dilihat
+git checkout hash --namafile
+git checkout b9644d1 --file1.txt                                 #untuk melihat isi file file1.txt nya sebelum terjadi perubahan "menambah file4.txt" pada versi hash b9644d1
+
+#kembalikan seperti semula jika tidak ingin melakukan perubahan file secara permanen
+git restore --staged file1.txt
+git restore file1.txt
+
+

@@ -1,0 +1,13 @@
+### FORK ###
+Salah satu git workflow yang sebelumnya kita jelaskan di kelas Git Branching adalah Forking Workflow.
+Forking Workflow biasanya digunakan ketika kita ingin kontribusi ke project opensource, dimana kita tidak punya akses langsung ke git repository nya, sehingga kita melakukan forking (duplikasi) git repository ke tempat kita.
+Pada kasus menggunakan github, misal kita melakukan forking dari ProgrammerZamanNow ke github profile kita.
+
+##pull request
+1. Buka repository orang lain yang ingin kita update.
+2. Pilih menu "Fork" di sebelah kanan atas.
+3. Pilih "Create fork"
+4. Lakukan semua perubahan di git repository profile kita.
+5. Dan setelah selesai, kita bisa melakukan pull request ke repository sumber forking kita melalui menu "Pull request".
+   Seperti inilah cara kerja ketika kita berkontribusi ke project opensource.
+

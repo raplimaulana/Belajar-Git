@@ -1,0 +1,16 @@
+### RENAME FILE ###
+Git dapat mendeteksi rename file.
+Secara sederhana sebenarnya rename file merupakan operasi gabungan antara hapus file, lalu menambah file baru dengan isi yang sama.
+Namun Git bisa otomatis mendeteksi jika terjadi perubahan nama file, karena isi file sebagian besar masih sama.
+
+Misal file1.txt diganti nama menjadi file_1.txt. 
+
+#working directory
+git status
+
+*apabila filenya diganti nama di working directory, Git mendeteksi seolah-olah kita menghapus file1.txt dan menambahkan file baru dengan nama file_1.txt dengan isi yang sama. 
+
+#staging index 
+git status
+
+*apabila filenya diganti di staging index, Git mendeteksi bahwa kita melakukan rename dari file1.txt ke file_1.txt.

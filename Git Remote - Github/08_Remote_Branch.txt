@@ -1,0 +1,24 @@
+### REMOTE BRANCH ###
+Secara default, saat kita melakukan clone, tidak semua remote branch akan di buat di local git project.
+
+##melihat remote branch
+#Jika kita ingin melihat semua daftar branch yang ada di remote repository, kita bisa gunakan perintah :
+git branch -r
+
+#Atau jika kita ingin melihat semua branch di local dan remote, kita bisa gunakan perintah :
+git branch -a
+
+##membuat branch dari remote branch
+Karena secara default hanya branch utama yang buat di local git project ketika kita clone, kadang kita ingin membuat local branch yang berisikan data dari remote branch
+Untuk melakukan hal itu, kita bisa gunakan perintah :
+
+git checkout -b localbranch namaremote/remotebranch
+git checkout -b feature/d origin/feature/d
+
+*biasanya nama localbranch dan nama remote branch disamakan agar tidak pusing dan tertukar
+
+##menghapus branch
+Perintah Push bisa digunakan untuk menghapus branch yang ada di remote repository.
+Perlu diingat, menghapus remote branch bukan berarti menghapus branch di local, jadi jika kita ingin hapus di local, kita harus lakukan secara manual.
+
+git push --delete origin develop

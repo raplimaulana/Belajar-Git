@@ -1,0 +1,41 @@
+### MERGE CONFLICT ###
+Ketika melakukan Pull Request, kadang sering terjadi Merge Conflict yang menyebabkan tidak bisa lakukan proses merge otomatis.
+Pada kasus seperti itu, kita perlu melakukan merge dari branch asal nya terlebih dahulu, lalu memperbaiki conflict nya.
+
+#melakukan pull request jika terjadi merge conflict
+Cara melakukan pull request adalah sebagai berikut:
+1. Buka project repository yang ada di Github.
+2. Pilih menu "Pull requests".
+3. Pilih "Compare & pull request".
+4. Akan muncul peringatan "Can’t automatically merge. Don’t worry, you can still create the pull request."
+5. Pilih "Create pull request"
+6. Perbaiki file yang menyebabkan conflict. 
+   •  Cara pertama dengan cara memilih "Resolve conflicts" pada "Conflicting files" di Github.
+      Namun cara ini tidak disarankan jika source codenya panjang dan banyak, karena nanti akan susah.
+   
+   •  Cara kedua dengan cara manual.
+      - Pada branch feature/user1 ketikan perintah "git pull origin master", untuk melakukan pull dari branch master remote repository ke branch local feature/user1.
+         Namun pada saat melakukan pull akan ada pemberitahuan bahwasannya telah terjadi conflict, sehingga perlu melakukan merge secara manual. 
+      - Selanjutnya lakukan merge dari branch master remote repository ke branch local feature/user1 dengan mengetikan "git merge origin/master".
+      - Akan terdapat peringatan bahwa terjadi conflict. Check dengan "git status" untuk melihat file apa yang menjadi conflict.
+      - Jika ingin membatalkan ketikan "git merge --abort", jika ingin dilanjutkan silahkan perbaiki secara manual (vim index.html)
+      - Semua perubahan yang tidak konflik akan secara otomatis berada di Staging Index, sedangkan perubahan yang konflik akan secara otomatis berada di Working Directory.
+      - Ketikan "git add ." dan "git commit -m "fix conflict index.html"
+      - Simpan ke remote repository dengan perintah "git push origin feature/user1"
+      - Sekarang sudah bisa di merge melalui Github 
+
+7. 
+
+4. Pilih mau merge ke branch mana (base), dari branch mana (compare).
+   Misal base:Master, compare:feature/contoh.
+5. Pilih "Create pull request".
+6. Isi nama pull request-nya beserta comment-nya jika dibutuhkan.
+7. Jika berkolaborasi dengan team lain, dapat memasukan orang lain sebagai reviewer, dll.
+8. Pilih "Create pull request".
+9. Refresh kembali menu "Pull request".
+10. Review perubahan file apa saja yang terjadi di "Files changed".
+11. Jika sudah oke lakukan "Merge pull request" di "Conservation". Selanjutnya pilih "Confirm merge".
+12. Secara otomatis branch feature/contoh akan melakukan merge di branch master
+
+
+

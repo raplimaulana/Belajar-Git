@@ -1,0 +1,17 @@
+### FETCH ###
+Fetch adalah perintah di Git yang digunakan untuk mendapatkan perubahan terakhir dari remote repository.
+Hal ini berguna ketika misal kita ingin mengetahui perubahan apa aja yang sudah terjadi pada remote repository, mungkin rekan kerja kita sudah menambah perubahan ke remote repository.
+Fetch tidak akan mengubah isi local Git Project kita, hanya melihat perubahan melihat perubahan yang terjadi di remote repsitory.
+
+##melakukan fetch untuk semua branch di remote repository
+git fetch namaremote
+git fetch origin
+
+##melakukan fetch untuk branch tertentu saja di remote
+git fetch namaremote remotebranch
+git fetch origin feture/a
+
+*perubahan hanya disimpan pada branch remote pada local repository, tidak akan ada perubahan pada branch local walaupun namanya sama
+
+*check perbedaan branch remote dan branch local menggunakan perintah berikut
+ git diff feature/a..origin/feature/a

@@ -1,0 +1,55 @@
+### GIT BRANCHING STRATEGY ###
+Kita sudah mulai bisa menggunakan fitur branching untuk mulai membuat aplikasi kita.
+
+Git branching strategy populer:
+•   Gitflow Workflow
+    Gitflow adalah strategi git branching yang paling tua dan paling banyak diadopsi.
+    https://nvie.com/posts/a-successful-git-branching-model/ 
+
+    Berikut adalah detail penjelasan dari metode Gitflow Workflow:
+    1. Membuat 5 branch utama agar memudahkan proses development.
+       - Branch Master           : Digunakan untuk melakukan release aplikasi ke publik.
+                                   Biasanya dalam bentuk tag version seperti 1.0.
+       
+       - Branch Develop          : Branch utama tempat develover melakukan merge.
+                                   Berisi aplikasi yang masih versi development.
+                                   Merge tidak boleh dilakukan di branch Master, kecuali jika aplikasinya sudah stabil dan tidak ada bug.
+       
+       - Branch Feature Branches : Apabila ingin menambah fitur aplikasi, dilakukan menggunakan branch Feature Branches. 
+                                   Misal feature login, featur logout, dll.
+                                   Setelah selesai branch Develop akan melakukan merge dengan branch feature Branches.
+
+       - Branch Release Branches : Setelah semua fitur-fitur di branch Develop dirasa sudah siap di relese, selanjutnya ajan di merge di branch Release Branches.
+                                   Jangan langsung melakukan merge dulu di Master. Branch ini berfungsi untuk memudahkan developer mencari bug sebelum melakukan merge ke branch Master.
+                                   Jika sudah tidak terdapat bug dapat melakukan merge di branch Master, namun jika terdapat bug lakukan kembali perbaikan dengan melakukan merge di branch Develop.
+                    
+       - Branch Hotfixes:        : Digunakan ketika terdapat bug setelah perilisan aplikasi.
+                                   File dari Master akan langsung dilakukan perbaikan dengan cara melakukan merge di branch Hotfixes.
+                                   Branch Develop akan melakukan merge dari branch Hotfixes sebagai base file untuk update-update yang akan ditambahkan nanti jika diperlukan.
+
+•   Trunk Based Development Workflow
+    Trunk Based Development sekarang merupakan salah satu strategi git branching yang sedang populer karena sederhana.
+    Tujuan dari workflow ini adalah, sederhana dan deliver pekerjaan secepatnya.
+    Diimplementasikan di perusahaan yang memiliki track record code quality-nya bagus, unit testing-nya bagus dan QA automation-nya juga bagus 
+    https://trunkbaseddevelopment.com/ 
+
+    Berikut adalah detail penjelasan dari metode Gitflow Workflow:
+    1. Membuat 1 branch utama saja yang diberi nama "Trunk" atau "Master".
+    2. Membuat feature dari branch utama dan saat itu juga langsung melakukan release ke production.
+       Sebelum melakukan merge, code yang ditulis harus dipastikan tidak ada error.
+    3. Biasanya satu fitur dikerjakan oleh banyak progammer secara bersama-sama (pair-progamming).
+
+
+•   Forking Workflow
+    Forking workflow merupakan salah satu strategi git branching yang populer dalam project OpenSource.
+    Selain itu banyak juga dignakan oleh para develover yang menggunakan github, gitlab dan repository sejenisnya (git remote).
+    Forking adalah mekanisme menduplikasi repository, biasanya hal ini dilakukan karena contributor tidak memiliki akses untuk melakukan perubahan ke repository utama.
+    https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow
+
+    Berikut adalah detail penjelasan dari metode Gitflow Workflow:
+    
+    Berikut adalah detail penjelasan dari metode Gitflow Workflow:
+    1. Menduplikasi aplikasi dari repository utama.
+    2. Melakukan perubahan menggunakan dan melakukan commit di repository pribadi.
+    3. Jika sudah selesai aplikasi, progammer akan di melakukan pull request ke repository utama yang berisi permintaan untuk melakukan merge.
+   

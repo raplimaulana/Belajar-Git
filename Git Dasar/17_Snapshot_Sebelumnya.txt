@@ -1,0 +1,30 @@
+Git juga memiliki fitur seperti mesin waktu, dimana kita bisa kembali pada snapshot sebelumnya.
+Kita bisa tentukan kemana tujuan snapshot kita hanya dengan menggunakan hash commit.
+Mirip dengan materi versi sebelumnya, hanya saja yang dilihat adalah keseluruhan dari isi file pada versi hash yang dipilih.
+
+#check hash yang ingin dilihat
+git log --oneline
+
+03d45e4 (HEAD -> master) menambah file4.txt
+b9644d1 menambah file4.txt
+5b83ef9 update file
+fb5a8aa Menambah file1.txt
+
+#menuju ke snapshot tertentu
+git checkout hash
+git checkout b9644d1
+
+#kembali ke snapshot paling awal
+git checkout namabranch
+git checkout master
+git checkout rapli
+
+*Materi branching akan dibahas secara terpisah, namun secara default saat kita membuat Git Repository, maka secara otomatis Git akan membuat branch.
+ Untuk melihat nama branch saat ini gunakan perintah berikut:
+ git branch --show-current
+
+#kembalikan seperti semula jika tidak ingin melakukan perubahan file secara permanen
+git restore --staged file1.txt
+git restore file1.txt
+
+

@@ -1,0 +1,24 @@
+### PUSH ###
+Walaupun kita sudah menyimpan perubahan di Git Project di local, tapi tidak secara otomatis akan di sync dengan Remote Repository.
+Hal ini karena sejak awal Git di desain sebagai distributed version control, artinya kita bisa melakukan perubahan dimanapun dan kapanpun, tanpa harus terkoneksi ke Git Server.
+Oleh karena itu, jika kita ingin mengirim perubahan yang terjadi di Git Project di local kita, kita perlu mengirimnya secara manual ke Git Server.
+Untuk mengirim perubahan di local ke git server, kita bisa gunakan perintah yang bernama push.
+
+### PUSH BRANCH ###
+##mengirim perubahan branch ke remote repository dengan nama branch sama
+git push origin master
+
+##mengirim perubahan branch ke remote repository dengan nama branch yang berbeda
+git push origin master:develop
+
+*nanti di repository Github-nya akan menyimpan file dengan nama branch develop, walaupun branch develop tidak dibuat sebelumnya pada local
+
+##mengirim semua perubahan di semua branch ke remote repository
+git push origin --all
+
+##menghapus branch
+Perintah Push juga bisa digunakan untuk menghapus branch yang ada di remote repository.
+Perlu diingat, menghapus remote branch bukan berarti menghapus branch di local, jadi jika kita ingin hapus di local, kita harus lakukan secara manual.
+
+git push --delete origin develop
+

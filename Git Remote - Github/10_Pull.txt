@@ -1,0 +1,12 @@
+### PULL ###
+Jika fetch hanya melakukan untuk mendapatkan perubahan di remote repository tanpa mengubah local repository.
+Dengan menggunakan pull, kita akan mengambil perubahan yang ada di remote repository dan disimpan di local repository.
+Hati-hati jangan sampai terjadi merge conflict, jika terjadi merge conflict, kita harus perbaiki secara manual seperti yang sudah kita pelajari di materi merge.
+Saat kita melakukan pull, secara otomatis kita akan melakukan fetch terlebih dahulu.
+
+##melakukan pull ke local branch saat ini
+git pull namaremote namaremotebranch
+git pull origin feature/a
+
+*check perbedaan branch remote dan branch local menggunakan perintah berikut
+ git diff feature/a..origin/feature/a

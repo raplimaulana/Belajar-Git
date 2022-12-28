@@ -1,0 +1,50 @@
+### TAG ###
+Tag merupakan fitur, dimana kita bisa menandai sebuah commit id.
+Sebelumnya kita sudah tahu dengan HEAD, yaitu reference ke commit terakhir di branch kita saat ini.
+Jika kita ingin membuat sebuah reference ke sebuah commit, kita bisa menggunakan Tag.
+Dalam pengembangan perangkat lunak, biasanya Tag digunakan sebagai penanda versi rilis dari aplikasi, misal Tag 1.0.0, Tag 1.0.2, dan lain-lain.
+Karena Tag merupakan reference ke commit, jadi Tag bisa dilakukan di branch manapun.
+
+##membuat tag
+#check id commit yang akan diberi tag
+git log --oneline --graph
+
+* 7747a82 (HEAD -> master) Release version 1.0.2
+* adf0b75 Release version 1.0.1
+* 016478a Release version 1.0.0
+
+#membuat tag
+git tag tagName commitId
+git tag 1.0.0 016478a
+git tag 1.0.1 adf0b75
+git tag 1.0.2 7747a82
+
+*tag adalah sesuatu yang unik, artinya jika kita sudah membuat tag dengan nama A, maka kita tidak bisa membuat tag dengan nama yang sama lagi
+
+##menampilkan tag
+git tag -l 
+
+atau 
+
+git tag --list
+
+##checkout ke tag
+Seperti yang sudah dijelaskan di kelas Git Dasar, kita kita melihat snapshot sebelumnya di Git.
+Sekarang dengan menggunakan Tag, kita juga bisa melihat snapshot sebelumnya tanpa harus menggunakan commitId, cukup menggunakan Tag.
+
+git checkout tagname
+git checkout 1.0.0
+git checkout master
+
+##menghapus tag
+Tidak ada cara untuk mengubah Tag, jadi jika kita ingin mengubah Tag, kita bisa membuat Tag baru ke commit yang sama, lalu menghapus Tag yang lama.
+
+git tag -d namatag
+git tag -d 1.0.0
+
+atau
+
+git tag --delete namatag
+git tag --delete 1.0.0
+
+

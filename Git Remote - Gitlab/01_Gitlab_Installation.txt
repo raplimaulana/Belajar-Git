@@ -1,0 +1,45 @@
+### GITLAB INSTALLATION ###
+
+VM specifications.
+- podX-raplima-node01 : Ubuntu 18.04 LTS ( 2 vCPUs, 2GB RAM, 20GB Disk)
+
+Node podX-raplima-node01
+•	IP Address : 10.20.20.100/24
+•	Gateway : 10.20.20.1
+•	Hostname : podX-raplima-node01
+
+
+1. Edit name resolution.
+   sudo vim /etc/hosts
+
+   10.20.20.100 pod1-gitlab-master gitlab-adinusa.id
+   
+2. Install Docker.
+   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+   sudo apt-get update
+   sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+
+3. Check status of Docker service.
+   sudo systemctl status docker
+   docker –version
+
+4. Installing Docker Compose.
+   sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+   sudo chmod +x /usr/local/bin/docker-compose
+
+5. Display the Docker Compose version.
+   sudo docker-compose –version
+
+5. Register a new user Gitlab account on your web browser.
+
+6. Install Git.
+   •	Windows -> https://git-scm.com/download/win
+   •	ubuntu : sudo apt install git
+   •	centos : sudo yum install git
+
+7. Config Git global setup.
+   git config --global user.name "rapli maulana"
+   git config --global user.email "rapli.maulana@gmail.com"
+   
+

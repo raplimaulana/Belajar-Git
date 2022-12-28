@@ -1,0 +1,30 @@
+Untuk menambah file baru ke Repository, kita cukup tambahkan file nya saja. Secara otomatis file yang kita tambahkan awalnya akan berada di working directory.
+Secara default saat menambah file baru, file tersebut tidak akan di track perubahannya.
+Agar perubahan di track, kita harus pindahkan dari working directory ke staging index
+
+##melihat ada file baru yang ditambahkan atau tidak
+git status
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+
+*Untracked files = file baru yang ditambahkan tapi belum di pindahkan ke staging index
+
+##memindahkan file ke staging index
+git add file1.txt                               #memindahkan satu file ke staging index
+git add .                                       #memindahkan semua file pada folder ke staging index
+
+#chek status
+git status
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+
+*Changes to be committed = file baru yang ditambahkan sudah pindahkan ke staging index, tapi belum di committed
+
+##commit ke repository
+git commit -m "Menambahkan file1.txt"
+
+
