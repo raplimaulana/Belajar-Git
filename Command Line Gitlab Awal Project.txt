@@ -10,7 +10,7 @@ git config --global user.email "rapli.maulana@gmail.com"
 ##Create a new repository
 git clone https://gitlab.com/rapli.maulana/latihan-git.git
 cd latihan-git
-git switch -c main
+git switch -c main atau git branch -M main
 touch README.md
 git add README.md
 git commit -m "add README"
