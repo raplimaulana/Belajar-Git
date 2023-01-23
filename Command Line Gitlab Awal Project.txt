@@ -7,6 +7,22 @@ You can also upload existing files from your computer using the instructions bel
 git config --global user.name "rapli maulana"
 git config --global user.email "rapli.maulana@gmail.com"
 
+### From Github ###
+##Create a new repository on the command line
+echo "# belajar-jenkins-shared-library" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:raplimaulana/belajar-jenkins-shared-library.git
+git push -u origin main
+
+##Push an existing repository from the command line
+git remote add origin git@github.com:raplimaulana/belajar-jenkins-shared-library.git
+git branch -M main
+git push -u origin main
+
+### From Gitlab ###
 ##Create a new repository
 git clone https://gitlab.com/rapli.maulana/latihan-git.git
 cd latihan-git
