@@ -22,6 +22,9 @@ git remote add origin git@github.com:raplimaulana/belajar-jenkins-shared-library
 git branch -M main
 git push -u origin main
 
+
+
+
 ### From Gitlab ###
 ##Create a new repository
 git clone https://gitlab.com/rapli.maulana/latihan-git.git
